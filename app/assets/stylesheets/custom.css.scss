@@ -1,0 +1,79 @@
+// Changes to Bootstrap styling appear before the imports
+$navbar-default-bg: DarkSlateBlue;
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo
+{
+  float: left;
+  font-size: 1.7em;
+  color: AntiqueWhite;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-space: -1px;
+}
+
+#logo:hover
+{
+  text-decoration: none;
+  color: AntiqueWhite;
+}
+
+.center
+{
+  text-align: center;
+}
+
+.jumbotron
+{
+  background-image: asset-url("background.jpg");
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1
+{
+  color: CornflowerBlue;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.btn-xlarge
+{
+  font-size: 1.7em;
+}
+
+footer
+{
+  margin-top: 40px;
+  padding-top: 5px;
+  border-top: 1px solid #EAEAEA;
+  color: #777;
+}
+
+footer a:hover
+{
+  color: #222;
+}
+
+footer small
+{
+  float: left;
+}
+
+footer ul
+{
+  float: right;
+  list-style: none;
+}
+
+footer ul li
+{
+  float: left;
+  margin-left: 15px;
+}
