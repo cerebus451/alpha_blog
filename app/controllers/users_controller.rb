@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update]
+  before_action :require_same_user, only: [:edit, :update]
+  
   
   def new
     @user = User.new()
@@ -28,6 +30,14 @@ class UsersController < ApplicationController
     end
   end
   
+  def show
+    @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+  end
+  
+  def index
+    @users = User.paginate(page: params[:page], per_page: 5)
+  end
+  
   private
 
   def user_params
@@ -38,4 +48,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
+  def require_same_user
+    if !logged_in? || current_user != @user
+      flash[:danger] = "You can only edit your own profile"
+      redirect_to root_path
+    end
+  end
 end
