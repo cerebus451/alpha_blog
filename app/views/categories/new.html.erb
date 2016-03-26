@@ -1,0 +1,28 @@
+<h1 align='center'>Create new category</h1>
+<%= render 'shared/errors', obj: @category %>
+
+<div class='row'>
+  <div class='col-xs-12'>
+    <%= form_for(@category, :html =>  {class: "form-horizontal", role: "form"}) do |f| %>
+
+      <div class='form-group'>
+        <div class="col-sm-2">
+          <%= f.label :name %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :name, class: "form-control", placeholder: "Enter categorye", autofocus: true %>
+        </div>
+      </div>
+
+      <div class='form-group'>
+        <div class='col-sm-offset-2 col-sm-8'>
+          <%= f.submit class: "btn btn-lrg btn-primary" %>
+        </div>
+      </div>
+      
+    <% end %>
+    <div class='col-xs-4 col-xs-offset-4'>
+      [ <%= link_to "Cancel request and return to listing", articles_path %> ]
+    </div>
+  </div>
+</div>

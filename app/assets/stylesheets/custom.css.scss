@@ -113,3 +113,31 @@ footer ul li
   list-style: none;
   padding-left: 0;
 }
+
+.badge
+{
+  background-color: CornflowerBlue;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.badge a
+{
+  color: AntiqueWhite;
+}
+
+.badge a:hover
+{
+  color: AntiqueWhite;
+}
+
+.badge a:visited
+{
+  color: AntiqueWhite;
+}
+
+.input_checkbox input
+{
+  width: auto !important;
+}
